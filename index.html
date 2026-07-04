@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Home Workbench - 模型路由与本地优先 AI 工作台</title>
+    <title>AI Home Workbench - 免安装版模型路由工作台</title>
     <meta
       name="description"
-      content="AI Home Workbench 是面向家庭和普通办公用户的本地优先 AI 桌面工作台，用模型 Provider、任务路由、本地知识和 Markdown 成果输出组织日常 AI 工作。"
+      content="AI Home Workbench 免安装版是面向家庭和普通办公用户的本地优先 AI 桌面工作台，用模型 Provider、任务路由、本地知识和 Markdown 成果输出组织日常 AI 工作。"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://mindsetdiary.site/" />
@@ -31,7 +31,7 @@
         "description": "AI Home Workbench 是面向家庭和普通办公用户的本地优先 AI 桌面工作台，统一管理家庭空间、模型路由、项目、本地知识和 Markdown 成果。",
         "url": "https://mindsetdiary.site/",
         "codeRepository": "https://github.com/Yuzhirou-419/ai-home-workbench",
-        "downloadUrl": "https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip",
+        "downloadUrl": "https://github.com/Yuzhirou-419/ai-home-workbench/releases",
         "inLanguage": "zh-CN"
       }
     </script>
@@ -63,8 +63,8 @@
             AI Home Workbench 面向家庭和普通办公用户，把 Provider 绑定、任务路由、本地知识、项目资料和 Markdown 成果输出整合到一个清晰的桌面工作台。
           </p>
           <div class="hero-actions" aria-label="主要操作">
-            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
-              下载源码 ZIP
+            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/releases" target="_blank" rel="noreferrer">
+              下载免安装版
             </a>
             <a class="button secondary" href="https://github.com/Yuzhirou-419/ai-home-workbench" target="_blank" rel="noreferrer">
               打开 GitHub
@@ -134,19 +134,29 @@
       <section class="content-section" id="download">
         <div class="section-heading">
           <span>下载</span>
-          <h2>先用源码版体验，后续可替换为安装包下载。</h2>
+          <h2>现在优先下载免安装版，解压后就能体验。</h2>
           <p>
-            当前仓库处于早期 MVP 阶段，推荐开发者和早期用户先从 GitHub 下载源码运行。等 Windows 安装包发布后，可以把主按钮链接改到 Releases 页面。
+            免安装版适合先试用产品核心流程，不需要走安装器。开发者仍然可以下载源码 ZIP 或用 Git 克隆仓库继续研究。
           </p>
         </div>
         <div class="download-grid">
           <article class="download-card featured">
             <div>
               <p class="card-label">推荐</p>
-              <h3>下载源码 ZIP</h3>
+              <h3>免安装版</h3>
+              <p>从 GitHub Releases 下载标注为免安装版或 portable 的压缩包，解压到本地文件夹后运行。</p>
+            </div>
+            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/releases" target="_blank" rel="noreferrer">
+              前往下载页
+            </a>
+          </article>
+          <article class="download-card">
+            <div>
+              <p class="card-label">源码</p>
+              <h3>源码 ZIP</h3>
               <p>适合先看项目结构、文档和桌面端原型，不需要配置 Git。</p>
             </div>
-            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
+            <a class="button secondary" href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
               获取源码包
             </a>
           </article>
@@ -158,16 +168,6 @@
             </div>
             <code>git clone https://github.com/Yuzhirou-419/ai-home-workbench.git</code>
           </article>
-          <article class="download-card">
-            <div>
-              <p class="card-label">后续</p>
-              <h3>安装包 Releases</h3>
-              <p>Windows 安装包发布后，会在 GitHub Releases 中统一提供。</p>
-            </div>
-            <a class="button secondary" href="https://github.com/Yuzhirou-419/ai-home-workbench/releases" target="_blank" rel="noreferrer">
-              查看 Releases
-            </a>
-          </article>
         </div>
       </section>
 
@@ -176,24 +176,22 @@
           <span>使用说明</span>
           <h2>从下载到打开工作台，只需要几步。</h2>
           <p>
-            这份说明面向早期源码版。AI Home Workbench 会把真实资料保存在你选择的本地工作区，代码仓库只保存产品代码和示例结构。
+            这份说明面向免安装版用户。AI Home Workbench 会把真实资料保存在你选择的本地工作区，应用目录和工作区可以分开管理。
           </p>
         </div>
         <div class="steps-list">
           <article class="step-item">
             <strong>1</strong>
             <div>
-              <h3>准备运行环境</h3>
-              <p>安装 Node.js 20 或更高版本，并启用 pnpm。首次运行前在项目根目录安装依赖。</p>
-              <pre><code>pnpm install</code></pre>
+              <h3>下载免安装版压缩包</h3>
+              <p>进入 GitHub Releases，下载最新的免安装版压缩包。不要把它放在系统临时目录，建议单独建一个应用文件夹。</p>
             </div>
           </article>
           <article class="step-item">
             <strong>2</strong>
             <div>
-              <h3>启动桌面工作台</h3>
-              <p>开发模式会打开 Electron 桌面壳和本地前端服务，用于体验家庭空间、项目和模型配置。</p>
-              <pre><code>pnpm dev</code></pre>
+              <h3>解压并启动</h3>
+              <p>解压后进入应用目录，双击启动程序。免安装版不会写入安装器记录，后续更新时可以用新版目录替换旧版目录。</p>
             </div>
           </article>
           <article class="step-item">
@@ -262,7 +260,7 @@
           <span>GitHub</span>
           <h2>源码、问题反馈和版本发布都在这里维护。</h2>
           <p>
-            站点上的下载和使用说明会跟随这个仓库更新。你也可以先收藏 Releases 页面，等待后续安装包发布。
+            站点上的下载和使用说明会跟随这个仓库更新。免安装版、源码包和后续版本都会优先放在 Releases 页面。
           </p>
         </div>
         <div class="repo-panel">
@@ -276,7 +274,15 @@
               </dd>
             </div>
             <div>
-              <dt>源码下载</dt>
+              <dt>免安装版下载</dt>
+              <dd>
+                <a href="https://github.com/Yuzhirou-419/ai-home-workbench/releases" target="_blank" rel="noreferrer">
+                  GitHub Releases
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>源码 ZIP</dt>
               <dd>
                 <a href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
                   main 分支 ZIP 包
@@ -302,8 +308,8 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>现在有 Windows 安装包吗？</summary>
-            <p>当前页面先提供源码下载和本地开发运行说明。等安装包发布后，可以把下载按钮切换到 GitHub Releases。</p>
+            <summary>现在需要安装吗？</summary>
+            <p>不需要。当前优先提供免安装版，下载压缩包后解压运行即可。源码 ZIP 和 Git 克隆入口保留给开发者。</p>
           </details>
           <details>
             <summary>API Key 会上传到网站吗？</summary>

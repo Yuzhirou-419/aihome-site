@@ -1,6 +1,6 @@
 # AIhome 展示站
 
-这是给 Cloudflare Pages 准备的 AI Home Workbench 静态展示站，包含下载入口、原创使用说明、GitHub 链接、隐私页、SEO 基础文件和 AdSense 预留位。
+这是给 Cloudflare Pages 准备的 AI Home Workbench 静态展示站，包含免安装版下载入口、原创使用说明、GitHub 链接、隐私页、SEO 基础文件和 AdSense 预留位。
 
 ## 部署到 Cloudflare Pages
 
@@ -28,5 +28,6 @@
 ## 主要链接
 
 - GitHub 仓库：https://github.com/Yuzhirou-419/ai-home-workbench
+- 免安装版：https://github.com/Yuzhirou-419/ai-home-workbench/releases
 - 源码 ZIP：https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip
 - Releases：https://github.com/Yuzhirou-419/ai-home-workbench/releases
