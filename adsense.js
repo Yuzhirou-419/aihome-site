@@ -11,13 +11,27 @@
     return;
   }
 
-  const script = document.createElement("script");
-  script.async = true;
-  script.crossOrigin = "anonymous";
-  script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(client);
-  document.head.appendChild(script);
+  function pushAds() {
+    frames.forEach(function (frame) {
+      const ad = frame.querySelector(".adsbygoogle");
+      if (!ad) {
+        return;
+      }
+      try {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
+      } catch (error) {
+        frame.dataset.active = "false";
+        const fallback = frame.querySelector(".ad-fallback");
+        if (fallback) {
+          fallback.hidden = false;
+          fallback.textContent = "AdSense 暂时没有返回广告，请检查发布商 ID、广告位和域名审核状态。";
+        }
+      }
+    });
+  }
 
-  frames.forEach((frame) => {
+  frames.forEach(function (frame) {
     const key = frame.getAttribute("data-ad-key") || "";
     const slot = config.slots && config.slots[key];
     const ad = frame.querySelector(".adsbygoogle");
@@ -37,23 +51,17 @@
     }
   });
 
-  script.addEventListener("load", function () {
-    frames.forEach(function (frame) {
-      const ad = frame.querySelector(".adsbygoogle");
-      if (!ad) {
-        return;
-      }
-      try {
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.push({});
-      } catch (error) {
-        frame.dataset.active = "false";
-        const fallback = frame.querySelector(".ad-fallback");
-        if (fallback) {
-          fallback.hidden = false;
-          fallback.textContent = "AdSense 暂时没有返回广告，请检查发布商 ID、广告位和域名审核状态。";
-        }
-      }
-    });
-  });
+  const scriptSelector = 'script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]';
+  let script = document.querySelector(scriptSelector);
+
+  if (!script) {
+    script = document.createElement("script");
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(client);
+    document.head.appendChild(script);
+  }
+
+  script.addEventListener("load", pushAds, { once: true });
+  window.setTimeout(pushAds, 1200);
 })();

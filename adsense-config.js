@@ -1,6 +1,6 @@
 window.AIHOME_ADSENSE = {
-  enabled: false,
-  client: "ca-pub-0000000000000000",
+  enabled: true,
+  client: "ca-pub-8977862168442936",
   slots: {
     top: "",
     guide: ""
