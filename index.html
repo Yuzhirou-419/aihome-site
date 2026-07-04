@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Home Workbench - 模型路由与本地优先 AI 工作台</title>
+    <meta
+      name="description"
+      content="AI Home Workbench 是面向家庭和普通办公用户的本地优先 AI 桌面工作台，用模型 Provider、任务路由、本地知识和 Markdown 成果输出组织日常 AI 工作。"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mindsetdiary.site/" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI Home Workbench" />
+    <meta
+      property="og:description"
+      content="把家庭成员、模型 API、本地知识和办公成果放进同一个本地优先工作台。"
+    />
+    <meta property="og:image" content="https://mindsetdiary.site/assets/aihome-soul-page.png" />
+    <meta property="og:url" content="https://mindsetdiary.site/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Home Workbench",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Windows",
+        "softwareVersion": "0.1.0",
+        "description": "AI Home Workbench 是面向家庭和普通办公用户的本地优先 AI 桌面工作台，统一管理家庭空间、模型路由、项目、本地知识和 Markdown 成果。",
+        "url": "https://mindsetdiary.site/",
+        "codeRepository": "https://github.com/Yuzhirou-419/ai-home-workbench",
+        "downloadUrl": "https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip",
+        "inLanguage": "zh-CN"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="主导航">
+        <a class="brand-link" href="#top" aria-label="AI Home Workbench 首页">
+          <span class="brand-mark">AI</span>
+          <span>AI Home</span>
+        </a>
+        <div class="nav-links">
+          <a href="#soul">灵魂页</a>
+          <a href="#download">下载</a>
+          <a href="#guide">使用说明</a>
+          <a href="#github">GitHub</a>
+          <a href="#adsense">广告测试</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero-section" id="top">
+        <div class="hero-copy">
+          <p class="section-kicker">Local-first AI desktop workbench</p>
+          <h1>一页管住模型。</h1>
+          <p class="hero-subtitle">
+            AI Home Workbench 面向家庭和普通办公用户，把 Provider 绑定、任务路由、本地知识、项目资料和 Markdown 成果输出整合到一个清晰的桌面工作台。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
+              下载源码 ZIP
+            </a>
+            <a class="button secondary" href="https://github.com/Yuzhirou-419/ai-home-workbench" target="_blank" rel="noreferrer">
+              打开 GitHub
+            </a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img
+            src="./assets/aihome-soul-page.png"
+            width="2048"
+            height="1152"
+            alt="AI Home Workbench 的模型 Provider 页面，包含 OpenAI、Claude、Gemini、本地模型和任务路由配置"
+          />
+        </figure>
+      </section>
+
+      <section class="ad-band" id="adsense" aria-label="广告测试位">
+        <div class="section-heading compact">
+          <span>广告</span>
+          <h2>AdSense 测试位</h2>
+        </div>
+        <div class="ad-frame" data-ad-key="top">
+          <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <p class="ad-fallback">填入 AdSense 发布商 ID 后，这里会加载真实广告。</p>
+        </div>
+      </section>
+
+      <section class="content-section soul-section" id="soul">
+        <div class="section-heading">
+          <span>灵魂页</span>
+          <h2>AIhome 的关键不是多一个聊天框，而是把模型调度变成一张可维护的工作表。</h2>
+          <p>
+            这页把 OpenAI、Claude、Gemini、本地模型和后续更多 Provider 放在同一个入口里。用户不用记住每个模型适合什么，只要在任务路由里设好规则，研究、长文分析、方案写作和低成本任务就能自动走到合适的模型。
+          </p>
+        </div>
+        <div class="soul-layout">
+          <figure class="soul-shot">
+            <img
+              src="./assets/aihome-soul-page.png"
+              width="2048"
+              height="1152"
+              alt="AI Home Workbench 模型中心截图"
+            />
+          </figure>
+          <div class="soul-notes">
+            <article>
+              <h3>统一 API 绑定</h3>
+              <p>Provider 类型、显示名称、默认模型、Base URL 和 API Key 在一个表单里维护，降低普通用户切换模型的负担。</p>
+            </article>
+            <article>
+              <h3>能力状态可见</h3>
+              <p>每个 Provider 都能看到是否已绑定 Key、是否启用、属于云模型还是本地模型，排查问题时不用翻配置文件。</p>
+            </article>
+            <article>
+              <h3>任务路由先行</h3>
+              <p>不同任务默认使用不同模型，长文分析、资料调研、写方案、PPT 大纲和低成本任务可以各走各的路线。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="download">
+        <div class="section-heading">
+          <span>下载</span>
+          <h2>先用源码版体验，后续可替换为安装包下载。</h2>
+          <p>
+            当前仓库处于早期 MVP 阶段，推荐开发者和早期用户先从 GitHub 下载源码运行。等 Windows 安装包发布后，可以把主按钮链接改到 Releases 页面。
+          </p>
+        </div>
+        <div class="download-grid">
+          <article class="download-card featured">
+            <div>
+              <p class="card-label">推荐</p>
+              <h3>下载源码 ZIP</h3>
+              <p>适合先看项目结构、文档和桌面端原型，不需要配置 Git。</p>
+            </div>
+            <a class="button primary" href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
+              获取源码包
+            </a>
+          </article>
+          <article class="download-card">
+            <div>
+              <p class="card-label">开发</p>
+              <h3>Git 克隆</h3>
+              <p>适合准备持续更新、提交问题或参与开发的用户。</p>
+            </div>
+            <code>git clone https://github.com/Yuzhirou-419/ai-home-workbench.git</code>
+          </article>
+          <article class="download-card">
+            <div>
+              <p class="card-label">后续</p>
+              <h3>安装包 Releases</h3>
+              <p>Windows 安装包发布后，会在 GitHub Releases 中统一提供。</p>
+            </div>
+            <a class="button secondary" href="https://github.com/Yuzhirou-419/ai-home-workbench/releases" target="_blank" rel="noreferrer">
+              查看 Releases
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section split-section" id="guide">
+        <div class="section-heading sticky-heading">
+          <span>使用说明</span>
+          <h2>从下载到打开工作台，只需要几步。</h2>
+          <p>
+            这份说明面向早期源码版。AI Home Workbench 会把真实资料保存在你选择的本地工作区，代码仓库只保存产品代码和示例结构。
+          </p>
+        </div>
+        <div class="steps-list">
+          <article class="step-item">
+            <strong>1</strong>
+            <div>
+              <h3>准备运行环境</h3>
+              <p>安装 Node.js 20 或更高版本，并启用 pnpm。首次运行前在项目根目录安装依赖。</p>
+              <pre><code>pnpm install</code></pre>
+            </div>
+          </article>
+          <article class="step-item">
+            <strong>2</strong>
+            <div>
+              <h3>启动桌面工作台</h3>
+              <p>开发模式会打开 Electron 桌面壳和本地前端服务，用于体验家庭空间、项目和模型配置。</p>
+              <pre><code>pnpm dev</code></pre>
+            </div>
+          </article>
+          <article class="step-item">
+            <strong>3</strong>
+            <div>
+              <h3>选择本地工作区</h3>
+              <p>第一次进入时选择一个本地文件夹。应用会在里面创建用户空间、共享知识、模型配置和成果输出目录。</p>
+            </div>
+          </article>
+          <article class="step-item">
+            <strong>4</strong>
+            <div>
+              <h3>绑定模型并创建项目</h3>
+              <p>在模型中心维护 OpenAI、Claude、Gemini、DeepSeek、通义千问等 Provider，再为研究、文件分析、方案写作等任务选择默认路线。</p>
+            </div>
+          </article>
+          <article class="step-item">
+            <strong>5</strong>
+            <div>
+              <h3>输出可保存的成果</h3>
+              <p>早期版本优先输出 Markdown 文件，适合沉淀调研摘要、会议材料、PPT 大纲和项目笔记。后续会扩展 Word、PPT、PDF 和网页预览。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span>能力</span>
+          <h2>不是只会聊天的 AI 入口，而是一个本地资料工作台。</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>家庭空间</h3>
+            <p>为不同家庭成员建立独立空间，也保留共享知识区，适合共用电脑或共用模型订阅的场景。</p>
+          </article>
+          <article>
+            <h3>模型路由</h3>
+            <p>把不同任务分配给不同模型 Provider，保留备用路线和成本限制，降低普通用户切换模型的门槛。</p>
+          </article>
+          <article>
+            <h3>本地优先</h3>
+            <p>项目、知识、聊天记录和成果输出都围绕本地文件夹组织，用户能看见自己的数据放在哪里。</p>
+          </article>
+          <article>
+            <h3>成果导向</h3>
+            <p>重要输出不只留在对话窗口里，而是沉淀成 Markdown、文档、PPT 大纲和后续可预览的页面。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ad-band inline-ad" aria-label="内容广告位">
+        <div class="ad-frame" data-ad-key="guide">
+          <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <p class="ad-fallback">内容广告位已预留，配置 AdSense 后自动启用。</p>
+        </div>
+      </section>
+
+      <section class="content-section split-section" id="github">
+        <div class="section-heading sticky-heading">
+          <span>GitHub</span>
+          <h2>源码、问题反馈和版本发布都在这里维护。</h2>
+          <p>
+            站点上的下载和使用说明会跟随这个仓库更新。你也可以先收藏 Releases 页面，等待后续安装包发布。
+          </p>
+        </div>
+        <div class="repo-panel">
+          <dl>
+            <div>
+              <dt>仓库地址</dt>
+              <dd>
+                <a href="https://github.com/Yuzhirou-419/ai-home-workbench" target="_blank" rel="noreferrer">
+                  github.com/Yuzhirou-419/ai-home-workbench
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>源码下载</dt>
+              <dd>
+                <a href="https://github.com/Yuzhirou-419/ai-home-workbench/archive/refs/heads/main.zip">
+                  main 分支 ZIP 包
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>克隆命令</dt>
+              <dd>
+                <button class="copy-command" type="button" data-copy="git clone https://github.com/Yuzhirou-419/ai-home-workbench.git">
+                  复制 Git 克隆命令
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content-section faq-section">
+        <div class="section-heading">
+          <span>常见问题</span>
+          <h2>上线前先把几个关键问题说清楚。</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>现在有 Windows 安装包吗？</summary>
+            <p>当前页面先提供源码下载和本地开发运行说明。等安装包发布后，可以把下载按钮切换到 GitHub Releases。</p>
+          </details>
+          <details>
+            <summary>API Key 会上传到网站吗？</summary>
+            <p>不会。这个站点只是产品展示和下载说明。AI Home Workbench 的真实模型 Key 应在本地应用和本地工作区中维护，不应提交到代码仓库。</p>
+          </details>
+          <details>
+            <summary>这个站适合做 SEO 和 AdSense 吗？</summary>
+            <p>适合起步。页面包含原创说明、下载链接、GitHub 链接、隐私页、robots、sitemap 和广告位。AdSense 仍需要你的账号、域名审核和真实发布商 ID。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>AI Home Workbench</strong>
+        <p>本地优先的家庭 AI 工作台。源码由 GitHub 仓库维护。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./privacy.html">隐私政策</a>
+        <a href="./ads.txt">ads.txt</a>
+        <a href="https://github.com/Yuzhirou-419/ai-home-workbench" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
+
+    <script src="./adsense-config.js"></script>
+    <script src="./adsense.js"></script>
+  </body>
+</html>
